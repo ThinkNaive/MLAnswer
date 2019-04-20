@@ -1,0 +1,1 @@
+warning("off", "Octave:divide-by-zero");% avoid warning: division by zerowarning("on", "Octave:divide-by-zero");

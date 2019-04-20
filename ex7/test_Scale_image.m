@@ -1,0 +1,2 @@
+function test_Scale_image(origin, dist, scale)    img = imread(origin);    out = zeros(size(img,1)/scale, size(img,2)/scale, 3);    for i = 1:size(out,1)-1        for j = 1:size(out,2)-1            y = i*scale;            x = j*scale;            out(i, j, :) = sum(sum(img(y:y+scale-1, x:x+scale-1, :))) ./ 36;        endfor    endfor    out = uint8(out);    imwrite(out, dist);
+endfunction
